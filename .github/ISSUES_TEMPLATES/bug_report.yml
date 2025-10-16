@@ -1,0 +1,30 @@
+name: 🐞 Bug Report
+description: Report a bug or something that is not working as expected.
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: describe-bug
+    attributes:
+      label: Describe the bug
+      description: "A clear and concise description of what the bug is."
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "How can we reproduce the issue? Please be as specific as possible."
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: "What did you expect to happen?"
+    validations:
+      required: true
