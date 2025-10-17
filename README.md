@@ -2,7 +2,35 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, yarn, pnpm, or bun package manager
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Eyrie-Nigeria/Eyrie-fe.git
+cd eyrie-fe
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### Running the Development Server
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -16,9 +44,27 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Available Scripts
+
+- `npm run dev` - Start the development server with Turbopack
+- `npm run build` - Build the application for production
+- `npm run start` - Start the production server
+- `npm run lint` - Check for linting errors
+- `npm run lint:fix` - Auto-fix linting errors
+- `npm run format` - Format all files with Prettier
+
+### Code Quality
+
+This project uses:
+
+- **ESLint** for code linting
+- **Prettier** for code formatting
+- **Husky** for Git hooks
+- **lint-staged** for pre-commit linting and formatting
+
+Code is automatically formatted and linted before each commit.
 
 ## Learn More
 
