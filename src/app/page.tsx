@@ -5,6 +5,12 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        {/* Tailwind CSS Test Component */}
+        <div className="bg-blue-500 text-white px-8 py-6 rounded-md shadow-lg mb-8">
+          <h2 className="text-xl font-bold mb-2">Tailwind CSS is Working!</h2>
+          <p className="text-sm">This component is styled with Tailwind utility classes.</p>
+        </div>
+
         <Image
           className={styles.logo}
           src="/next.svg"
