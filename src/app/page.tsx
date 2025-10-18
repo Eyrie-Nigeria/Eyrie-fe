@@ -1,10 +1,16 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        {/* Tailwind CSS Test Component */}
+        <div className="bg-blue-500 text-white px-8 py-6 rounded-md shadow-lg mb-8">
+          <h2 className="text-xl font-bold mb-2">Tailwind CSS is Working!</h2>
+          <p className="text-sm">This component is styled with Tailwind utility classes.</p>
+        </div>
+
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -52,13 +58,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
           Learn
         </a>
         <a
@@ -66,13 +66,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
           Examples
         </a>
         <a
@@ -80,13 +74,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
           Go to nextjs.org →
         </a>
       </footer>
