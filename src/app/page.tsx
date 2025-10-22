@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -9,6 +10,15 @@ export default function Home() {
         <div className="bg-blue-500 text-white px-8 py-6 rounded-md shadow-lg mb-8">
           <h2 className="text-xl font-bold mb-2">Tailwind CSS is Working!</h2>
           <p className="text-sm">This component is styled with Tailwind utility classes.</p>
+        </div>
+
+        {/* Loading Spinner Demo */}
+        <div className="flex flex-col items-center gap-4 py-8">
+          <h2 className="text-lg font-semibold">Loading Spinner Demo</h2>
+          <LoadingSpinner size="sm" />
+          <LoadingSpinner size="md" />
+          <LoadingSpinner size="lg" />
+          <span className="text-sm text-muted-foreground">Try changing the size prop!</span>
         </div>
 
         <Image
