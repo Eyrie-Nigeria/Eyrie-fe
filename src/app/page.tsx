@@ -1,93 +1,77 @@
-import Image from 'next/image';
-import { LoadingSpinner } from '@/components/ui/loading-spinner';
-import styles from './page.module.css';
+import { LandingNavbar } from '@/components/landing/landing-navbar';
+import { HeroSection } from '@/components/landing/hero-section';
+import { ServicesSection } from '@/components/landing/services-section';
+import { FeaturedListings } from '@/components/landing/featured-listings';
+import { WhatYouGet } from '@/components/landing/what-you-get';
+import { Testimonials } from '@/components/landing/testimonials';
+import { Cta } from '@/components/landing/cta';
+import { DownloadAppBanner } from '@/components/landing/download-app-banner';
+import { Footer } from '@/components/landing/footer';
+import { ErrorBoundary } from '@/components/error-boundary';
+import { ErrorFallback } from '@/components/error-fallback';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Tailwind CSS Test Component */}
-        <div className="bg-blue-500 text-white px-8 py-6 rounded-md shadow-lg mb-8">
-          <h2 className="text-xl font-bold mb-2">Tailwind CSS is Working!</h2>
-          <p className="text-sm">This component is styled with Tailwind utility classes.</p>
+    <div className="min-h-screen bg-background">
+      {/* Top Anchor */}
+      <div id="top" />
+
+      {/* Navbar with Error Boundary */}
+      <ErrorBoundary fallback={<ErrorFallback componentName="Navigation" />}>
+        <LandingNavbar />
+      </ErrorBoundary>
+
+      <main>
+        {/* Hero Section */}
+        <ErrorBoundary fallback={<ErrorFallback componentName="Hero Section" />}>
+          <HeroSection />
+        </ErrorBoundary>
+
+        {/* Services Section */}
+        <div id="services">
+          <ErrorBoundary fallback={<ErrorFallback componentName="Services Section" />}>
+            <ServicesSection />
+          </ErrorBoundary>
         </div>
 
-        {/* Loading Spinner Demo */}
-        <div className="flex flex-col items-center gap-4 py-8">
-          <h2 className="text-lg font-semibold">Loading Spinner Demo</h2>
-          <LoadingSpinner size="sm" />
-          <LoadingSpinner size="md" />
-          <LoadingSpinner size="lg" />
-          <span className="text-sm text-muted-foreground">Try changing the size prop!</span>
+        {/* Property Listings Section */}
+        <div id="listings">
+          <ErrorBoundary fallback={<ErrorFallback componentName="Property Listings" />}>
+            <FeaturedListings />
+          </ErrorBoundary>
         </div>
 
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        {/* About Section */}
+        <div id="about">
+          <ErrorBoundary fallback={<ErrorFallback componentName="About Section" />}>
+            <WhatYouGet />
+          </ErrorBoundary>
+        </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        {/* Testimonials */}
+        <ErrorBoundary fallback={<ErrorFallback componentName="Testimonials" />}>
+          <Testimonials />
+        </ErrorBoundary>
+
+        {/* CTA Section */}
+        <ErrorBoundary fallback={<ErrorFallback componentName="Call to Action" />}>
+          <Cta />
+        </ErrorBoundary>
+
+        {/* Download App Banner */}
+        <div className="px-4 sm:px-6 -mt-12 -mb-12">
+          <ErrorBoundary fallback={<ErrorFallback componentName="Download Banner" />}>
+            <DownloadAppBanner />
+          </ErrorBoundary>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      {/* Footer Section */}
+      <div id="contact">
+        <ErrorBoundary fallback={<ErrorFallback componentName="Footer" />}>
+          <Footer />
+        </ErrorBoundary>
+      </div>
     </div>
   );
 }

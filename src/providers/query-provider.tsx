@@ -10,8 +10,23 @@ export function QueryProvider({ children }: { children: ReactNode }) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            staleTime: 60 * 1000, // 1 minute
-            refetchOnWindowFocus: false,
+            staleTime: 5 * 60 * 1000,
+            gcTime: 10 * 60 * 1000,
+            retry: (failureCount, error: unknown) => {
+              const errorWithStatus = error as { status?: number };
+              if (
+                errorWithStatus?.status &&
+                errorWithStatus.status >= 400 &&
+                errorWithStatus.status < 500
+              ) {
+                return false;
+              }
+              return failureCount < 3;
+            },
+            refetchOnWindowFocus: process.env.NODE_ENV === 'production',
+          },
+          mutations: {
+            retry: 1,
           },
         },
       })
@@ -20,7 +35,7 @@ export function QueryProvider({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       {children}
-      <ReactQueryDevtools initialIsOpen={false} />
+      {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
     </QueryClientProvider>
   );
 }
