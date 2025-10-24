@@ -4,8 +4,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ### Prerequisites
 
-- Node.js 18.x or higher
-- npm, yarn, pnpm, or bun package manager
+- Node.js 18.x or higher.
+- npm, yarn, pnpm, or bun package manager.
 
 ### Installation
 
