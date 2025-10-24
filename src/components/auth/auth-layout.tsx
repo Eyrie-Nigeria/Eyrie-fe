@@ -17,6 +17,7 @@ export function AuthLayout({ children, imageSrc, imageAlt }: AuthLayoutProps) {
       transition={{ duration: 0.5 }}
       className="auth-container"
     >
+      {/* Background Image - Add error handling */}
       <Image
         src="/images/Login.jpg"
         alt="Login Background"
@@ -25,6 +26,10 @@ export function AuthLayout({ children, imageSrc, imageAlt }: AuthLayoutProps) {
         priority
         sizes="100vw"
         quality={75}
+        onError={() => {
+          // Fallback handling
+          console.error('Failed to load background image');
+        }}
       />
       <div className="auth-background" />
 
@@ -50,6 +55,10 @@ export function AuthLayout({ children, imageSrc, imageAlt }: AuthLayoutProps) {
               sizes="40vw"
               quality={80}
               priority
+              onError={() => {
+                // Fallback image handling
+                console.error('Failed to load side image');
+              }}
             />
           </motion.div>
         </div>
