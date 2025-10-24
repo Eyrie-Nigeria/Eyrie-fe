@@ -4,8 +4,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ### Prerequisites
 
-- Node.js 18.x or higher
-- npm, yarn, pnpm, or bun package manager
+- Node.js 18.x or higher.
+- npm, yarn, pnpm, or bun package manager.
 
 ### Installation
 
@@ -27,6 +27,48 @@ pnpm install
 # or
 bun install
 ```
+
+3. Set up Git hooks (Required for all team members):
+
+```bash
+# Configure Git to use custom hooks
+git config core.hooksPath .githooks
+
+# For Linux/Mac users, make the hook executable:
+chmod +x .githooks/pre-push
+```
+
+This sets up a pre-push hook that prevents direct pushes to protected branches (`main`, `staging`, `development`). Team members must create feature branches and submit Pull Requests instead.
+
+**Note for Windows users:** The hook works in Git Bash. If you're using Command Prompt or PowerShell, use Git Bash for git operations.
+
+### Branching Strategy
+
+**Important:** Always create your feature branches from the `development` branch.
+
+```bash
+# Switch to development branch
+git checkout development
+
+# Pull latest changes
+git pull origin development
+
+# Create your feature branch (use a descriptive name)
+git checkout -b feature/your-feature-name
+
+# Example:
+# git checkout -b feature/add-login-page
+# git checkout -b fix/navbar-responsive-issue
+```
+
+After making your changes, push your feature branch and create a Pull Request to `development`.
+
+**Protected Branches:**
+- `main` - Production branch
+- `staging` - Staging/QA branch  
+- `development` - Main development branch
+
+Direct pushes to these branches are blocked. Always work on feature branches!
 
 ### Running the Development Server
 
