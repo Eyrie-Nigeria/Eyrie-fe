@@ -53,6 +53,10 @@
   --input: 20 5.9% 90%;
   --ring: 16 100% 50%; /* Your brand orange */
   --radius: 0.75rem; /* rounded-xl */
+  
+  /* Sidebar colors */
+  --sidebar-background: 0 0% 0%; /* Black */
+  --sidebar-foreground: 0 0% 100%;
 }
 
 .dark {
@@ -84,6 +88,27 @@
   body {
     @apply bg-background text-foreground;
     min-height: 100dvh;
+  }
+  
+  /* Sidebar styling */
+  .sidebar-container {
+    background-color: hsl(var(--sidebar-background)) !important;
+    color: hsl(var(--sidebar-foreground)) !important;
+  }
+  
+  /* Sidebar scrollbar styling */
+  .sidebar-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-track {
+    background: #334155;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: #64748b;
+    border-radius: 2px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
   }
 }
 

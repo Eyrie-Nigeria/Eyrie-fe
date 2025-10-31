@@ -122,3 +122,132 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Project Structure Sample
+
+```
+src/app/
+├── (auth)/
+│   ├── login/
+│   │   └── page.tsx
+│   ├── register/
+│   │   └── page.tsx
+│   ├── forgot-password/
+│   │   └── page.tsx
+│   └── layout.tsx
+├── (marketing)/
+│   ├── about/
+│   │   └── page.tsx           # localhost:3000/about
+│   ├── contact/
+│   │   └── page.tsx           # localhost:3000/contact
+│   ├── features/
+│   │   └── page.tsx           # localhost:3000/features
+│   └── pricing/
+│       └── page.tsx           # localhost:3000/pricing
+├── (dashboard)/
+│   ├── user/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── profile/
+│   │   │   └── page.tsx
+│   │   ├── notifications/
+│   │   │   └── page.tsx
+│   │   ├── messages/
+│   │   │   └── page.tsx
+│   │   ├── saved-searches/
+│   │   │   └── page.tsx
+│   │   ├── favorites/
+│   │   │   └── page.tsx
+│   │   ├── billing/
+│   │   │   └── page.tsx
+│   │   ├── activity/
+│   │   │   └── page.tsx
+│   │   └── settings/
+│   │       └── page.tsx
+│   ├── landlord/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── profile/
+│   │   │   └── page.tsx
+│   │   ├── notifications/
+│   │   │   └── page.tsx
+│   │   ├── messages/
+│   │   │   └── page.tsx
+│   │   ├── properties/
+│   │   │   ├── page.tsx
+│   │   │   ├── [id]/
+│   │   │   │   └── page.tsx
+│   │   │   └── new/
+│   │   │       └── page.tsx
+│   │   ├── tenants/
+│   │   │   └── page.tsx
+│   │   ├── bookings/
+│   │   │   └── page.tsx
+│   │   ├── billing/
+│   │   │   └── page.tsx
+│   │   ├── activity/
+│   │   │   └── page.tsx
+│   │   └── settings/
+│   │       └── page.tsx
+│   ├── agent/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── profile/
+│   │   │   └── page.tsx
+│   │   ├── notifications/
+│   │   │   └── page.tsx
+│   │   ├── messages/
+│   │   │   └── page.tsx
+│   │   ├── listings/
+│   │   │   ├── page.tsx
+│   │   │   ├── [id]/
+│   │   │   │   └── page.tsx
+│   │   │   └── new/
+│   │   │       └── page.tsx
+│   │   ├── leads/
+│   │   │   └── page.tsx
+│   │   ├── billing/
+│   │   │   └── page.tsx
+│   │   ├── activity/
+│   │   │   └── page.tsx
+│   │   └── settings/
+│   │       └── page.tsx
+│   ├── admin/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── profile/
+│   │   │   └── page.tsx
+│   │   ├── notifications/
+│   │   │   └── page.tsx
+│   │   ├── messages/
+│   │   │   └── page.tsx
+│   │   ├── users/
+│   │   │   ├── page.tsx
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   ├── analytics/
+│   │   │   └── page.tsx
+│   │   ├── properties/
+│   │   │   └── page.tsx
+│   │   ├── billing/
+│   │   │   └── page.tsx
+│   │   ├── activity/
+│   │   │   └── page.tsx
+│   │   └── settings/
+│   │       └── page.tsx
+│   └── layout.tsx
+├── api/
+│   ├── auth/
+│   │   ├── route.ts
+│   │   └── [...nextauth]/
+│   │       └── route.ts
+│   ├── users/
+│   │   └── route.ts
+│   ├── properties/
+│   │   └── route.ts
+│   └── upload/
+│       └── route.ts
+├── globals.css
+├── layout.tsx          # Root layout
+└── page.tsx           # Redirects to marketing or dashboard
+```
