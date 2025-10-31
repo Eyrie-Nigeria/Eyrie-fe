@@ -46,7 +46,7 @@ export function FeaturesGrid() {
         viewport={{ once: true }}
         className="flex items-center justify-between mb-6 sm:mb-8"
       >
-        <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-[#FF4500]">
+        <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-black">
           What You Get with Eyrie
         </h2>
       </motion.div>
