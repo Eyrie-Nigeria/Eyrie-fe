@@ -49,7 +49,7 @@ export function ServicesSection() {
           viewport={{ once: true }}
           className="flex items-center justify-between mb-6 sm:mb-8 lg:mb-12"
         >
-          <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-[#FF4500]">
+          <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-black">
             Our Services
           </h2>
         </motion.div>
