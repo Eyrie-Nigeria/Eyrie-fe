@@ -23,9 +23,7 @@ export function FeaturedListingsHeader() {
       animate={{ opacity: 1, y: 0 }}
       className="flex items-center justify-between mb-6 sm:mb-8"
     >
-      <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-[#FF4500]">
-        Top Rated
-      </h2>
+      <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-black">Top Rated</h2>
       <Button
         onClick={handleViewAll}
         className="text-sm sm:text-base font-medium text-[#059669] hover:underline hover:text-[#047857] transition-colors"
