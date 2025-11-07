@@ -16,9 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Eyrie Nigeria - Find Your Dream Property',
   description: 'Discover the perfect property in Nigeria with Eyrie',
-  icons: {
-    icon: '/favicon.ico',
-  },
   openGraph: {
     title: 'Eyrie Nigeria - Find Your Dream Property',
     description: 'Discover the perfect property in Nigeria with Eyrie',
