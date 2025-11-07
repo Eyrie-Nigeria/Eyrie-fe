@@ -16,6 +16,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Eyrie Nigeria - Find Your Dream Property',
   description: 'Discover the perfect property in Nigeria with Eyrie',
+  openGraph: {
+    title: 'Eyrie Nigeria - Find Your Dream Property',
+    description: 'Discover the perfect property in Nigeria with Eyrie',
+    url: 'https://eyrie.ng',
+    siteName: 'Eyrie',
+    images: [
+      {
+        url: 'https://eyrie.ng/eyrie-logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Eyrie Branding',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Eyrie – Empowering Innovation',
+    description: 'Discover creative digital products and projects from Eyrie.',
+    images: ['https://eyrie.ng/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({
