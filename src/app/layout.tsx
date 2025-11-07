@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Eyrie',
     images: [
       {
-        url: 'https://eyrie.ng/eyrie-logo.jpg',
+        url: 'https://eyrie.ng/icon/eyrie-logo.jpg',
         width: 1200,
         height: 630,
         alt: 'Eyrie Branding',
